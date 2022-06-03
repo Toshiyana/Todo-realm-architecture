@@ -16,6 +16,8 @@
 		99A0D7BA28489200007009D1 /* Todo_UIKitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99A0D7B928489200007009D1 /* Todo_UIKitTests.swift */; };
 		99A0D7C428489200007009D1 /* Todo_UIKitUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99A0D7C328489200007009D1 /* Todo_UIKitUITests.swift */; };
 		99A0D7C628489200007009D1 /* Todo_UIKitUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99A0D7C528489200007009D1 /* Todo_UIKitUITestsLaunchTests.swift */; };
+		99A0D7D428489781007009D1 /* TaskCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99A0D7D228489781007009D1 /* TaskCell.swift */; };
+		99A0D7D528489781007009D1 /* TaskCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 99A0D7D328489781007009D1 /* TaskCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +51,8 @@
 		99A0D7BF28489200007009D1 /* Todo-UIKitUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Todo-UIKitUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		99A0D7C328489200007009D1 /* Todo_UIKitUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Todo_UIKitUITests.swift; sourceTree = "<group>"; };
 		99A0D7C528489200007009D1 /* Todo_UIKitUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Todo_UIKitUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		99A0D7D228489781007009D1 /* TaskCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskCell.swift; sourceTree = "<group>"; };
+		99A0D7D328489781007009D1 /* TaskCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TaskCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +106,8 @@
 				99A0D7A2284891FB007009D1 /* AppDelegate.swift */,
 				99A0D7A4284891FB007009D1 /* SceneDelegate.swift */,
 				99A0D7A6284891FB007009D1 /* ViewController.swift */,
+				99A0D7D228489781007009D1 /* TaskCell.swift */,
+				99A0D7D328489781007009D1 /* TaskCell.xib */,
 				99A0D7A8284891FB007009D1 /* Main.storyboard */,
 				99A0D7AB284891FF007009D1 /* Assets.xcassets */,
 				99A0D7AD284891FF007009D1 /* LaunchScreen.storyboard */,
@@ -137,12 +143,15 @@
 				99A0D79B284891FB007009D1 /* Sources */,
 				99A0D79C284891FB007009D1 /* Frameworks */,
 				99A0D79D284891FB007009D1 /* Resources */,
+				99A0D7D62848A89D007009D1 /* SwiftLint */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			name = "Todo-UIKit";
+			packageProductDependencies = (
+			);
 			productName = "Todo-UIKit";
 			productReference = 99A0D79F284891FB007009D1 /* Todo-UIKit.app */;
 			productType = "com.apple.product-type.application";
@@ -215,6 +224,8 @@
 				Base,
 			);
 			mainGroup = 99A0D796284891FB007009D1;
+			packageReferences = (
+			);
 			productRefGroup = 99A0D7A0284891FB007009D1 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -231,6 +242,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				99A0D7D528489781007009D1 /* TaskCell.xib in Resources */,
 				99A0D7AF284891FF007009D1 /* LaunchScreen.storyboard in Resources */,
 				99A0D7AC284891FF007009D1 /* Assets.xcassets in Resources */,
 				99A0D7AA284891FB007009D1 /* Main.storyboard in Resources */,
@@ -253,11 +265,33 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		99A0D7D62848A89D007009D1 /* SwiftLint */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = SwiftLint;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if which swiftlint >/dev/null; then\n    swiftlint autocorrect --format\n    swiftlint\nelse\n    echo \"SwiftLint does not exist, download from https://github.com/realm/SwiftLint\"\nfi\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		99A0D79B284891FB007009D1 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				99A0D7D428489781007009D1 /* TaskCell.swift in Sources */,
 				99A0D7A7284891FB007009D1 /* ViewController.swift in Sources */,
 				99A0D7A3284891FB007009D1 /* AppDelegate.swift in Sources */,
 				99A0D7A5284891FB007009D1 /* SceneDelegate.swift in Sources */,
